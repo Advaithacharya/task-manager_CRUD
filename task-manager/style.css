@@ -1,0 +1,169 @@
+/* General Reset & Font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #c3ecf7, #f5f7fa);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Container Card */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Header */
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+}
+
+/* Task Input Section */
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.task-input input,
+#searchInput {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
+  font-size: 16px;
+}
+
+.task-input button {
+  padding: 12px 18px;
+  background: #00b894;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.task-input button:hover {
+  background: #019270;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+li.completed .task-text {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.6;
+}
+
+/* Task Text */
+.task-text {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+/* Buttons for actions */
+.actions button {
+  margin-left: 6px;
+  padding: 6px 8px;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.actions button:hover {
+  background: #ddd;
+}
+
+/* Edit input */
+.edit-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Search Bar */
+#searchInput {
+  margin-top: 10px;
+}
+
+/* Clear Button */
+#clearAllBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #d63031;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#clearAllBtn:hover {
+  background: #b52a2a;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .task-input {
+    flex-direction: column;
+  }
+
+  .task-input input,
+  .task-input button {
+    width: 100%;
+  }
+
+  .actions button {
+    padding: 6px;
+  }
+}
